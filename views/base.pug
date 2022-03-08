@@ -1,0 +1,26 @@
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title WordINFO
+        link(rel="stylesheet", href="style.css")
+        <script type="module" src="app.js"></script>
+    body 
+        <div class="title">
+            <h1>Get <span class="focus">INFORMATION</span><br> About Some <span class="focus">WORDS</span></h1>
+        </div>
+
+        <form action="/base" method="get" class="pesquisa" enctype="application/x-www-form-urlencoded">
+            <input name="palavra" class="input" type="text">
+            <button class="botao" type="submit">Pesquisar</button>
+        </form>
+
+
+        section.palavras-container     
+            figure.cartao
+                    div.nome-palavra.focus #{name} 
+                    div.significado-palavra <strong>Definition:</strong>  #{definition}
+                    div.exemplo-palavra <strong>Example:</strong>  #{example}
+                    div.fonetica-palavra <strong>Pronunciation:</strong>  #{pronunciation}
